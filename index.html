@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Typing Game</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="count">
+    <p id="timer">0.00</p>
+    <div class="rest">
+      <p id="rest-num"></p>
+      <p>more questions</p>
+    </div>
+    <div id="switches">
+      <label for="timerSwitch" class="switch_label">
+        <div class="t-switch">
+          <div class="switch">
+            <input type="checkbox" id="timerSwitch" />
+            <div class="circle"></div>
+            <div class="base"></div>
+          </div>
+          <span class="title">ON</span>
+        </div>
+      </label>
+  
+      <label for="restSwitch" class="switch_label">
+        <div class="r-switch">
+          <div class="switch">
+            <input type="checkbox" id="restSwitch" />
+            <div class="circle"></div>
+            <div class="base"></div>
+          </div>
+          <span class="title">ON</span>
+        </div>
+      </label>
+    </div>
+
+    <div id="topScore"></div>
+  </div>
+
+
+
+  <div id="game">
+    <p id="target"></p>
+    <p id="finished">Finished!</p>
+    <p id="result"></p>
+  </div>
+
+
+  <div class="buttons">
+    <div id="reset">RESET</div>
+    <div id="restart">Click to RESTART</div>
+  </div>
+
+  <div class="records">
+    <div class="myScores">
+      <h2>SCORES</h2>
+      <div id="score">
+        <ul id="date">
+          <!-- <li></li> -->
+          <!-- <li></li> -->
+          <!-- <li></li> -->
+        </ul>
+        <ul id="seconds">
+          <!-- <li></li> -->
+          <!-- <li></li> -->
+          <!-- <li></li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="Ranking">
+      <h2></h2>
+
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

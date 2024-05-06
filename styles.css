@@ -1,0 +1,227 @@
+body {
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  background: #DAB3EE;
+  user-select: none;
+}
+
+#topScore {
+  margin: 0 auto;
+  color: #8200c9;
+}
+
+#game {
+  position: relative;
+  padding: 40px 0;
+  background: #fff;
+  border-radius: 20px;
+  width: 80%;
+  height: 220px;
+  margin: 0 auto;
+}
+
+#target {
+  font-size: 48px;
+  letter-spacing: .1em;
+  padding: 50px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+}
+
+#result {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 28px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  width: 100%;
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.count {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.rest {
+  display: flex;
+  transition: opacity 0.4s;
+}
+
+#rest-num {
+  padding-right: 12px;
+}
+
+#finished {
+  font-size: 48px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, transform 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  padding: 50px 0;
+}
+
+#finished.appear {
+  transform: translate(-50%, -50%);
+}
+
+#finished.appear,
+#result.appear {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.switches {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: -30px;
+}
+
+
+.switch_label {
+  display: flex;
+  align-items: center;
+}
+
+.switch_label input[type='checkbox'] {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.base {
+  width: 56px;
+  border-radius: 16px;
+  height: 32px;
+  background-color: rgb(219, 234, 254);
+}
+
+.title {
+  margin-top: 4px;
+}
+
+
+.circle {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: blue;transition: 0.5s;
+}
+.switch_label input:checked ~ .base {
+  background-color: #ddd;
+  transition: 0.5s;
+}
+.switch_label input:checked ~ .circle {
+  transform: translateX(-100%);
+  background-color: white;transition: 0.5s;
+}
+.switch {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+#switches {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+#timer {
+  transition: opacity 0.4s;
+}
+
+.remove {
+  opacity: 0;
+}
+
+.buttons {
+  position: relative;
+  margin: 0 auto;
+  top: 80px;
+}
+
+.buttons div {
+  font-size: 28px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1px solid #974abd;
+  border-radius: 50px;
+  width: 40%;
+  margin: auto;
+  padding: 20px 0;
+  background-color: #fff;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px #974abd;
+  transition: transform 0.3s;
+}
+
+.buttons div:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+#restart {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+#restart.appear {
+  opacity: 1;
+  visibility: visible;
+}
+
+#reset.appear {
+  opacity: 1;
+  visibility: visible;
+}
+
+.myScores {
+  opacity: 0;
+  position: relative;
+  top: 80px;
+  font-size: 20px;
+  width: 40%;
+  margin: 150px auto;
+}
+
+.myScores.appear {
+  opacity: 1;
+}
+
+#score {
+  display: flex;
+  justify-content: space-between;
+}
+
+#date, #seconds {
+  list-style: none;
+}
+
+.myScores h2 {
+  margin-bottom: 20px;
+}

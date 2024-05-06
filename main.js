@@ -83,15 +83,15 @@
   function top() {
     words = [
       'red',
-      // 'blue',
-      // 'green',
-      // 'yellow',
-      // 'pink',
-      // 'purple',
-      // 'orange',
-      // 'white',
-      // 'black',
-      // 'brown',
+      'blue',
+      'green',
+      'yellow',
+      'pink',
+      'purple',
+      'orange',
+      'white',
+      'black',
+      'brown',
     ];
     elapsedTime = 0;
     setButtonStateInitial();
@@ -138,21 +138,21 @@
       if (isPlaying === true) {//プレイ中ならenterしても何も起きない
         return;
       }
-      // setTimeout(() => {
-      //   target.textContent = '3';
-      // }, 200);
-      // setTimeout(() => {
-      //   target.textContent = '2';
-      // }, 1200);
-      // setTimeout(() => {
-      //   target.textContent = '1';
-      // }, 2200);
-      // setTimeout(() => {
+      setTimeout(() => {
+        target.textContent = '3';
+      }, 200);
+      setTimeout(() => {
+        target.textContent = '2';
+      }, 1200);
+      setTimeout(() => {
+        target.textContent = '1';
+      }, 2200);
+      setTimeout(() => {
         isPlaying = true;
         startTime = Date.now();
         countUp();
         setWord();
-      // }, 3200);
+      }, 3200);
     }
   });
 
